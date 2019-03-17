@@ -1,0 +1,39 @@
+version: '3.3'
+services:
+  alice:
+    image: nginx:alpine
+    ports:
+     - "8080:80"
+    volumes:
+      - type: bind
+        source: ./alice
+        target: /www/data
+      - type: bind
+        source: ./nginx
+        target: /etc/nginx/
+    secrets:
+      - my-secret
+    networks:
+      - app-net
+
+  bob:
+    image: nginx:alpine
+    ports:
+     - "8090:80"
+    volumes:
+      - type: bind
+        source: ./bob
+        target: /www/data
+      - type: bind
+        source: ./nginx
+        target: /etc/nginx/
+    networks:
+      - app-net
+
+secrets:
+  my-secret:
+    file: ./secret.txt
+
+networks:
+  app-net:
+    driver: bridge
