@@ -1,0 +1,47 @@
+version: '3.5'
+services:
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    volumes:
+      - type: volume
+        source: grafana-data
+        target: /var/lib/grafana
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    restart: always
+    networks:
+      - influxdb-net
+
+  influxdb:
+    image: influxdb
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    expose:
+      - 8086
+    volumes:
+      - type: volume
+        source: influxdb-data
+        target: /var/lib/influxdb
+      - type: bind
+        source: ./influxdb.conf
+        target: /etc/influxdb/influxdb.conf
+        read_only: true
+    command:
+      - --config
+      - /etc/influxdb/influxdb.conf
+    restart: on-failure
+    networks:
+      - influxdb-net
+
+volumes:
+  influxdb-data:
+  grafana-data:
+
+networks:
+  influxdb-net:
+    name: influxdb-net
+    driver: bridge
