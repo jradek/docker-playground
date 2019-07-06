@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+    nodered:
+        container_name: nodered
+        image: nodered/node-red-docker:rpi
+        restart: always
+        ports:
+            - 1880:1880
+        volumes:
+            - /home/pi/node-red-data:/data
+        network_mode: bridge
+
