@@ -1,0 +1,15 @@
+{
+    "name": "Node.js React Sample",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "appPort": 3000,
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "msjsdiag.debugger-for-chrome"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    // "postCreateCommand": "yarn install"
+    "postCreateCommand": "npm install"
+}

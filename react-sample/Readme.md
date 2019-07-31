@@ -36,6 +36,13 @@ This project was bootstrapped like this
         found 0 vulnerabilities
         ```
 
+## Debugging within `vscode`
+
+1. Open folder in `vscode` which would create a devcontainer
+2. In container (i.e. terminal in vscode), run `npm start`
+3. Launch debug configuration `Debug with Chrome`
+4. Happy debugging ...
+
 ## Generated `npm` Readme
 
 [Readme](Readme_npm.md)
