@@ -9,6 +9,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import About from "./pages/about";
 import Home from "./pages/home";
+import Temperature from "./pages/temperature";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       <Navbar />
       <div className="container">
         <Route exact path="/" component={Home} />
+      </div>
+      <div className="container">
+        <Route exact path="/temp" component={Temperature} />
       </div>
       <div className="container">
         <Route exact path="/about" component={About} />
