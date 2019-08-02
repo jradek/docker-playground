@@ -3,23 +3,44 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+
+  const elements = (
+    <React.Fragment>
+      <li>
+        <Link to="/">Posts</Link>
+      </li >
+      <li>
+        <Link to="/temp">Temperature</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+    </React.Fragment>
+  )
+
+  /* in App.js is javascript logic to make the sidenav logic work  */
   return (
-    <nav>
-      <div className="nav-wrapper">
-        <div className="container">
+    <React.Fragment>
+      <nav>
+        <div className="nav-wrapper">
+
           <Link to="/" className="brand-logo">
             React Playground
           </Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li>
-              <Link to="/">Posts</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
+          <a href="!#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+
+          <ul className="right hide-on-med-and-down">
+            {elements}
           </ul>
+
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* sidenav */}
+      <ul className="sidenav" id="mobile-demo">
+        {elements}
+      </ul>
+
+    </React.Fragment>
   );
 }
