@@ -13,6 +13,9 @@ export default function Navbar() {
         <Link to="/hooks">Hooks</Link>
       </li >
       <li>
+        <Link to="/st">Sport Timer</Link>
+      </li >
+      <li>
         <Link to="/temp">Temperature</Link>
       </li>
       <li>

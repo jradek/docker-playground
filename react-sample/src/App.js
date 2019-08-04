@@ -13,6 +13,7 @@ import About from "./pages/about";
 import Home from "./pages/home";
 import Temperature from "./pages/temperature";
 import Hooks from "./pages/hooks"
+import SportTimer from "./components/SportTimer"
 
 // Sidenav
 // TODO also see: https://github.com/AndyBraveMX/react-learning/tree/master/react-sidenav-materializecss
@@ -38,6 +39,9 @@ function App() {
       </div>
       <div className="container">
         <Route exact path="/hooks" component={Hooks} />
+      </div>
+      <div className="container">
+        <Route exact path="/st" component={SportTimer} />
       </div>
       <div className="container">
         <Route exact path="/about" component={About} />
