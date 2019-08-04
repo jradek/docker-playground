@@ -39,8 +39,8 @@ This project was bootstrapped like this
 ## Debugging within `vscode`
 
 1. Open folder in `vscode` which would create a devcontainer
-2. In container (i.e. terminal in vscode), run `npm start`
-3. Launch debug configuration `Debug with Chrome`
+2. Launch debug configuration `Debug with Chrome`
+3. In container (i.e. terminal in vscode), run `npm start`
 4. Happy debugging ...
 
 ## Generated `npm` Readme

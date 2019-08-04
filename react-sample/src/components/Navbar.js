@@ -10,6 +10,9 @@ export default function Navbar() {
         <Link to="/">Posts</Link>
       </li >
       <li>
+        <Link to="/hooks">Hooks</Link>
+      </li >
+      <li>
         <Link to="/temp">Temperature</Link>
       </li>
       <li>
