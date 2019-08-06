@@ -93,13 +93,13 @@ const useFetch = ({ url, delayMSec = 500 }) => {
     () => {
       setState({ data: null, isLoading: true });
 
-      delayMilliSec(delayMSec).then(() => {
-        fetch(url)
-          .then(x => x.text())
-          .then(y => {
+      fetch(url)
+        .then(x => x.text())
+        .then(y => {
+          setTimeout(() => {
             setState({ data: y, isLoading: false });
-          });
-      });
+          }, delayMSec);
+        });
     },
     // effect is triggered whenever the url changes or the delay
     [url, delayMSec]
