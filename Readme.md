@@ -25,4 +25,7 @@ $ docker run --name portainer -d -p 9000:9000 -v /var/run/docker.sock:/var/run/d
 
 * See [Readme](react-sample/Readme.md) to learn about
 
+## Jupyter docker stack
+
+* See [Readme](jupyter/Readme.md) to learn about
 

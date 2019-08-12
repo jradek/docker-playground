@@ -1,0 +1,14 @@
+{
+    "name": "Jupyter stack",
+    "dockerComposeFile": "../scipy-notebook.yaml",
+    "service": "jupyter",
+    "context": "..",
+    "extensions": [
+        "ms-python.python",
+        "vscodevim.vim"
+    ],
+    "settings": {
+        "python.pythonPath": "/opt/conda/bin/python"
+    },
+    "shutdownAction": "stopCompose"
+}
