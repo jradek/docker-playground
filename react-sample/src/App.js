@@ -12,19 +12,19 @@ import Navbar from "./components/Navbar";
 import About from "./pages/about";
 import Home from "./pages/home";
 import Temperature from "./pages/temperature";
-import Hooks from "./pages/hooks"
-import SportTimer from "./components/SportTimer"
+import Hooks from "./pages/hooks";
+import SportTimerPlayground from "./components/SportTimerPlayground";
+import IntervalTimer from "./components/IntervalTimer";
 
 // Sidenav
 // TODO also see: https://github.com/AndyBraveMX/react-learning/tree/master/react-sidenav-materializecss
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.sidenav');
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".sidenav");
   /*var instances =*/ M.Sidenav.init(elems, {
     edge: "left",
     inDuration: 250
   });
 });
-
 
 function App() {
   return (
@@ -41,7 +41,10 @@ function App() {
         <Route exact path="/hooks" component={Hooks} />
       </div>
       <div className="container">
-        <Route exact path="/st" component={SportTimer} />
+        <Route exact path="/intervaltimer" component={IntervalTimer} />
+      </div>
+      <div className="container">
+        <Route exact path="/stp" component={SportTimerPlayground} />
       </div>
       <div className="container">
         <Route exact path="/about" component={About} />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+// eslint-disable-next-line no-unused-vars
 const delayMilliSec = ms => new Promise(res => setTimeout(res, ms));
 
 // ****************************************************************************

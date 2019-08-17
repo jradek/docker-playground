@@ -17,7 +17,7 @@ const SimpleDisplay = props => {
   );
 };
 
-class SportTimer extends Component {
+class SportTimer2 extends Component {
   state = {
     interval: 0,
     value: 0,
@@ -62,6 +62,7 @@ class SportTimer extends Component {
 
     const now = new Date().getTime();
     const finished = now > this.state.wallclockDeadlineMs;
+
     if (finished) {
       this.removeTimer();
       this.setState({
@@ -74,6 +75,7 @@ class SportTimer extends Component {
       this.announce(`Finished`);
       return;
     }
+
     const raw = this.state.wallclockDeadlineMs - now;
     const rounded = Math.round(raw / 1000.0);
     const percent = Math.round(
@@ -81,6 +83,7 @@ class SportTimer extends Component {
         (this.state.wallclockDeadlineMs - this.state.wallclockStartMs)) *
         100
     );
+
     // console.log(
     //   "update raw = ",
     //   raw,
@@ -89,6 +92,7 @@ class SportTimer extends Component {
     //   ", percent ",
     //   percent
     // );
+
     this.setState({ value: rounded, valuePercent: percent });
   };
 
@@ -183,4 +187,4 @@ class SportTimer extends Component {
   }
 }
 
-export default SportTimer;
+export default SportTimer2;
