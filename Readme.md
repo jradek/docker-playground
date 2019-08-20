@@ -29,3 +29,7 @@ $ docker run --name portainer -d -p 9000:9000 -v /var/run/docker.sock:/var/run/d
 
 * See [Readme](jupyter/Readme.md) to learn about
 
+## Typescript testing container
+
+* See [Readme](typescript-node-12/README.md) to learn about
+
